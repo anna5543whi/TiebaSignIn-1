@@ -154,10 +154,10 @@ public class Run
      */
     public void send(String sckey){
         /** 将要推送的数据 */
-        String text = "总: "+ followNum + " - ";
-        text += "成功: " + success.size() + " 失败: " + (followNum - success.size());
-        String desp = "共 "+ followNum + " 贴吧，";
-        desp += "成功: " + success.size() + " 失败: " + (followNum - success.size());
+        String text = "总:"+followNum+"-";
+        text += "成功:" + success.size() + "失败:" + (followNum - success.size());
+        String desp = "共"+ followNum + "贴吧，";
+        desp += "成功:" + success.size() + "失败:" + (followNum - success.size());
         String body = "text="+text+"&desp="+"TiebaSignIn运行结果\n\n"+desp;
         StringEntity entityBody = new StringEntity(body,"UTF-8");
         HttpClient client = HttpClients.createDefault();
