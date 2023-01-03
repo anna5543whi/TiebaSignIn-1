@@ -156,13 +156,13 @@ public class Run
         /** 将要推送的数据 */
         String text = "总: "+ followNum + " - ";
         text += "成功: " + success.size() + " 失败: " + (followNum - success.size());
-        String desp = "共 "+ followNum + " 贴吧\n\n";
+        String desp = "共 "+ followNum + " 贴吧，";
         desp += "成功: " + success.size() + " 失败: " + (followNum - success.size());
         String body = "text="+text+"&desp="+"TiebaSignIn运行结果\n\n"+desp;
         StringEntity entityBody = new StringEntity(body,"UTF-8");
         HttpClient client = HttpClients.createDefault();
 //         HttpPost httpPost = new HttpPost("https://sc.ftqq.com/"+sckey+".send");
-        HttpPost httpPost = new HttpPost("https://api.day.app/8bkCSRuzuAQj837Vw7bNHJ/贴吧签到/"+entityBody);
+        HttpPost httpPost = new HttpPost("https://api.day.app/8bkCSRuzuAQj837Vw7bNHJ/贴吧签到/"+desp);
         httpPost.addHeader("Content-Type","application/x-www-form-urlencoded");
         httpPost.setEntity(entityBody);
         HttpResponse resp = null;
