@@ -163,6 +163,7 @@ public class Run
         HttpClient client = HttpClients.createDefault();
 //         HttpPost httpPost = new HttpPost("https://sc.ftqq.com/"+sckey+".send");
         HttpPost httpPost = new HttpPost("https://api.day.app/8bkCSRuzuAQj837Vw7bNHJ/贴吧签到/"+desp);
+         LOGGER.info("https://api.day.app/8bkCSRuzuAQj837Vw7bNHJ/贴吧签到/"+desp);
         httpPost.addHeader("Content-Type","application/x-www-form-urlencoded");
         httpPost.setEntity(entityBody);
         HttpResponse resp = null;
